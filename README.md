@@ -6,9 +6,9 @@ Deep Rock Galactic mod: play your own music (flac, mp3, ogg, opus, wav, m4a…) 
 
 **Download / 下载：** native edition, this repo / 原生版（本仓库）：[GitHub Releases](https://github.com/AdvinxCNN/DRGmod-CustomSoundtrackNative/releases/latest) · pak-only edition / 纯 pak 版：[mod.io](https://mod.io/g/drg/m/custom-soundtrack)
 
-Add the zip in [mintcat](https://github.com/iris-cat-dev/mintcat) with UE4SS turned on; the game's built-in Modding Menu alone cannot load it. The pak-only edition on mod.io is subscribed to in the Modding Menu.
+Add the zip in [mintcat](https://github.com/iris-cat-dev/mintcat) with UE4SS turned on; neither mint nor the game's built-in Modding Menu can load its `main.dll`. On mint or the Modding Menu, use the pak-only edition from mod.io.
 
-请在 [mintcat](https://github.com/iris-cat-dev/mintcat) 里开启 UE4SS 后添加 zip，仅靠游戏内置 Modding Menu 无法加载；mod.io 上的纯 pak 版在 Modding Menu 里订阅即可。
+请在 [mintcat](https://github.com/iris-cat-dev/mintcat) 里开启 UE4SS 后添加 zip；mint 和游戏内置 Modding Menu 都加载不了其中的 `main.dll`。用 mint 或 Modding Menu 的话请装 mod.io 上的纯 pak 版。
 
 ---
 
@@ -20,6 +20,7 @@ Play your own music in Deep Rock Galactic: missions, swarms, Dreadnoughts, extra
 
 - Deep Rock Galactic on Steam, Windows 64-bit.
 - **[mintcat](https://github.com/iris-cat-dev/mintcat) with UE4SS turned on.** Download the zip from GitHub Releases and add the whole zip in mintcat (it holds `main.dll` and `CustomSoundtrackNative.pak`); do not extract just the pak. Subscribing in the game's Modding Menu does not load `main.dll`.
+- **mint is not supported**: mint installs only the `.pak` from a zip and has no loader for `main.dll`, so with mint you get the page but no music is replaced. On mint, use the pak-only edition from mod.io.
 - **Mod Hub is optional**: with it the page is a Mod Hub tab; without it, press the open key (**K** by default) on the Space Rig or in a mission.
 - Client-side: teammates don't need it and hear the game's music.
 - Enable only one edition. If the pak-only Custom Soundtrack from mod.io is enabled too, this edition plays and the other stays idle. Disable Miracle's Custom Soundtrack.
@@ -83,6 +84,7 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 
 - Steam 版深岩银河，Windows 64 位。
 - **[mintcat](https://github.com/iris-cat-dev/mintcat)，并开启 UE4SS。** 从 GitHub Releases 下载 zip，在 mintcat 里添加整个 zip（里面是 `main.dll` 和 `CustomSoundtrackNative.pak`），不要只取 pak。只在游戏内 Modding Menu 订阅不会加载 `main.dll`。
+- **不支持 mint**：mint 只安装 zip 里的 `.pak`，没有加载 `main.dll` 的功能，用 mint 装只会出现页面、不会替换音乐。用 mint 的话请装 mod.io 上的纯 pak 版。
 - **Mod Hub 可选**：有它就多一个 Mod Hub 页签；没有它，在太空站或任务里按打开键（默认 **K**）打开页面。
 - 纯客户端：队友不用装，也听不到你的歌。
 - 两个版本只开一个。mod.io 上的纯 pak 版 Custom Soundtrack 同时启用时，由本版播放、纯 pak 版不启动。Miracle's Custom Soundtrack 请禁用。
