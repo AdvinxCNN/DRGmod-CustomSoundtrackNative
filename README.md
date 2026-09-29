@@ -48,7 +48,9 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 - Follows the game: when the game starts, fades or stops a piece of music, your song does the same. The game's music is muted before its first sample plays.
 - Gapless playback, or a crossfade of up to 10 seconds between songs.
 - Master, per-kind and per-song volume; optional loudness match that brings every song to the loudness of the game's music.
-- Shows song titles from the files' tags, what plays now, and has "Next song".
+- Shows song titles from the files' tags and what plays now.
+- **Prev song**, **Next song** and a play mode: **Shuffle** (every song once a round; Prev song goes back through what played this session) or **In order** (the list from top to bottom). The mode is one for every kind and is remembered.
+- Double-click a song's name to play it now, while its kind plays. The button beside it (Folder, Playlist, Added here) opens the song's folder in Explorer with the song selected; its tooltip says where the song is listed and how to remove it.
 - Memorial hall and jukebox songs are heard only nearby, like the game's, and follow the sound effects volume.
 - The open key can be a combination such as Alt+D: click the key box in the page's title bar and press it; right-click to clear.
 - English and Simplified Chinese page.
@@ -58,7 +60,7 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 
 - Songs: `FSD\Mods\CustomSoundtrack\` (shared with the pak-only edition).
 - This edition's settings, imported and page-added songs, per-song volumes and log: `FSD\Saved\SaveGames\Mods\CustomSoundtrackNative\` (`Settings.ini`, `Imported\`, `SongVolumes.txt`, `Log.txt`).
-- Console commands: `csn.status`, `csn.reload`, `csn.skip`.
+- Console commands: `csn.status`, `csn.reload`, `csn.skip`, `csn.prev`, `csn.mode [order|shuffle]`.
 
 ### Good to know
 
@@ -112,7 +114,9 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 - 跟着游戏走：游戏开始、淡出、停止一段音乐时，你的歌同样开始、淡出、停止；原版音乐在出声之前就被压住。
 - 无缝接下一首，或开最长 10 秒的换歌淡变。
 - 总音量、每类音量、每首音量；可选“响度归一”，把每首歌调到和原版音乐一样响。
-- 显示文件标签里的歌名、正在放的歌，有“下一首”。
+- 显示文件标签里的歌名和正在放的歌。
+- “**上一首**”“**下一首**”和播放模式：**随机播放**（每轮每首放一次，上一首沿本次运行放过的歌往回走）或**顺序播放**（按列表从上到下）。模式所有类别共用，会记住。
+- 双击歌名立刻切到这首（这一类正在放时）。旁边的按钮（文件夹 / 歌单文件 / 页面添加）在资源管理器里打开这首歌所在的文件夹并选中它，悬停说明这首歌写在哪里、怎么去掉。
 - 纪念堂和点唱机的歌和原版一样只在附近听得到，跟随音效音量。
 - 打开键可以是 Alt+D 这样的组合键：点页面标题栏的键位框后按下即可，右键清除。
 - 页面支持英文和简体中文。
@@ -122,7 +126,7 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 
 - 歌：`FSD\Mods\CustomSoundtrack\`（与纯 pak 版共用）。
 - 本版的设置、导入和页面加的歌、每首音量、日志：`FSD\Saved\SaveGames\Mods\CustomSoundtrackNative\`（`Settings.ini`、`Imported\`、`SongVolumes.txt`、`Log.txt`）。
-- 控制台命令：`csn.status`、`csn.reload`、`csn.skip`。
+- 控制台命令：`csn.status`、`csn.reload`、`csn.skip`、`csn.prev`、`csn.mode [order|shuffle]`。
 
 ### 注意
 
