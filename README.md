@@ -28,7 +28,8 @@ Play your own music in Deep Rock Galactic: missions, swarms, Dreadnoughts, extra
 
 ### What you can replace
 
-- Missions: cave ambience, single swarms, sustained attacks (looping swarm music: escort finale, shield generators, pumps, hacking, data vault guardians…), machine events, Dreadnoughts and other bosses, core stones and core rifts, extraction.
+- Missions: cave ambience, single swarms, sustained attacks (looping swarm music of events), machine events, Dreadnoughts and other bosses, core stones and core rifts, extraction, and the music while everyone loads into a mission.
+- Sustained attacks can have songs per event: Escort finale, Power Stations, Caretaker, On-Site Refining, Lithophage Meteorite, Rival bomb, Data Deposit. When the music starts, the mod looks at which event is running (on clients too) and plays that event's songs, or the general ones if it has none.
 - Space Rig: the rig's music (seasonal tracks included), the memorial hall, the jukebox.
 - Anything you don't give songs to keeps the game's music.
 
@@ -37,9 +38,10 @@ Play your own music in Deep Rock Galactic: missions, swarms, Dreadnoughts, extra
 Three ways, mixed freely; songs of one kind are shuffled together.
 
 - **Page**: pick a kind, paste a path and press Add (or Enter), or use **Browse…** to pick several files. You can preview songs and set volumes there.
-- **Folders**: drop files into `FSD\Mods\CustomSoundtrack\Music\<kind>\`. The kind folders are created the first time you play: `Ambient`, `Swarm`, `Pressure`, `Machine`, `Dreadnought`, `CoreRift`, `Extraction`, `RigAmbient`, `Memorial`, `Jukebox`. Subfolders are just for grouping.
+- **Folders**: drop files into `FSD\Mods\CustomSoundtrack\Music\<kind>\`. The kind folders are created the first time you play: `Ambient`, `Swarm`, `Pressure`, `Machine`, `Dreadnought`, `CoreRift`, `Extraction`, `Loading`, `RigAmbient`, `Memorial`, `Jukebox`. Subfolders are just for grouping.
 - **Text playlists**: `FSD\Mods\CustomSoundtrack\<kind>.txt`, the same files the pak-only edition reads.
 - Songs for one biome only: in the cave kinds, put them in a subfolder named after the biome (ID, English or Chinese name, e.g. `Music\Ambient\Glacial Strata\`), or add them with that biome's button selected. A biome with songs of its own plays only those; others play the songs for all biomes.
+- Songs for one sustained-attack event: a folder named after the event in `Music\Pressure\` (ID, English or Chinese name, e.g. `Music\Pressure\Caretaker\`; biome folders inside work too), an `event=Caretaker` section in `Pressure.txt`, or on the page: Ctrl+click **Sustained attack** and pick the event. An event without songs of its own plays the general ones.
 - After changing folders or playlists, press **Reload playlists** on the page.
 - Formats: flac, mp3, wav, ogg (Vorbis or Opus), opus by the mod's own decoders; m4a (AAC or ALAC), aac, mp4 and wma through Windows Media Foundation (Windows N editions need the Media Feature Pack).
 
@@ -51,6 +53,7 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 - Shows song titles from the files' tags and what plays now.
 - **Prev song**, **Next song** and a play mode: **Shuffle** (every song once a round; Prev song goes back through what played this session) or **In order** (the list from top to bottom). The mode is one for every kind and is remembered.
 - Double-click a song's name to play it now, while its kind plays. The button beside it (Folder, Playlist, Added here) opens the song's folder in Explorer with the song selected; its tooltip says where the song is listed and how to remove it.
+- The song list shows ten songs and scrolls (the bar beside it, or the mouse wheel over it); the biomes are a column beside the songs, each with its song count.
 - Memorial hall and jukebox songs are heard only nearby, like the game's, and follow the sound effects volume.
 - The open key can be a combination such as Alt+D: click the key box in the page's title bar and press it; right-click to clear.
 - English and Simplified Chinese page.
@@ -65,6 +68,7 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 ### Good to know
 
 - The open key does nothing while a terminal or the Esc menu is open (the game keeps the key).
+- On the loading screen the cave music may already have started, quietly under the loading music, until you land. The game does the same with its own music.
 - In exclusive fullscreen the file browser may send the game to the background.
 - Found a problem? Send `FSD\Saved\SaveGames\Mods\CustomSoundtrackNative\Log.txt` and the lines around `[CustomSoundtrackNative]` in `ue4ss\UE4SS.log`.
 - To uninstall, disable it in mintcat. Your song folders and playlists stay; delete `FSD\Saved\SaveGames\Mods\CustomSoundtrackNative\` if you want.
@@ -94,7 +98,8 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 
 ### 能换的音乐
 
-- 任务：洞穴环境、单波虫潮、持续攻势（循环的虫潮曲：护送终点、护盾发生器、泵站、骇入、数据宝库守卫者等）、机器事件、无畏等 Boss 战、核心岩与核心裂隙、撤离。
+- 任务：洞穴环境、单波虫潮、持续攻势（各种事件的循环虫潮曲）、机器事件、无畏等 Boss 战、核心岩与核心裂隙、撤离，以及进任务时等所有人加载完的那段音乐（加载等待）。
+- 持续攻势可以按事件分别配歌：护送终点、骇入发电站、看守者、就地精炼、噬岩体陨石、强敌炸弹、数据存储塔。音乐开始时模组看当时在进行哪个事件（客机也能认），放这个事件的歌，没有就放通用的歌。
 - 太空站：太空站音乐（含节日活动曲）、纪念堂、点唱机。
 - 没配歌的保留原版音乐。
 
@@ -103,9 +108,10 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 三种方式可以混用，同一类里的歌合在一起洗牌播放。
 
 - **页面**：选一类音乐，粘贴路径后点“添加”（或按回车），或点“**浏览…**”一次选多首。还能试听、调音量。
-- **文件夹**：把歌丢进 `FSD\Mods\CustomSoundtrack\Music\<类别>\`。第一次进游戏后会建好这些类别文件夹：`Ambient`、`Swarm`、`Pressure`、`Machine`、`Dreadnought`、`CoreRift`、`Extraction`、`RigAmbient`、`Memorial`、`Jukebox`。子文件夹只用来分组。
+- **文件夹**：把歌丢进 `FSD\Mods\CustomSoundtrack\Music\<类别>\`。第一次进游戏后会建好这些类别文件夹：`Ambient`、`Swarm`、`Pressure`、`Machine`、`Dreadnought`、`CoreRift`、`Extraction`、`Loading`、`RigAmbient`、`Memorial`、`Jukebox`。子文件夹只用来分组。
 - **文本歌单**：`FSD\Mods\CustomSoundtrack\<类别>.txt`，与纯 pak 版读的是同一批文件。
 - 只给某个群系的歌：洞穴的几类可以放进以群系命名的子文件夹（群系 ID、英文名、中文名都认，如 `Music\Ambient\冰封岩层\`），或在页面上选中该群系的按钮再加。有专属歌的群系只放专属歌，其余群系放“所有群系”的歌。
+- 只给某个持续攻势事件的歌：放进 `Music\Pressure\` 下以事件命名的文件夹（事件 ID、英文名、中文名都认，如 `Music\Pressure\看守者\`，里面也可以再建群系文件夹），或在 `Pressure.txt` 里写 `event=Caretaker` 段，或在页面上按住 Ctrl 点“**持续攻势**”选事件再加。没有专属歌的事件放通用的歌。
 - 改了文件夹或歌单后，点页面上的“**重新读取歌单**”。
 - 格式：flac、mp3、wav、ogg（Vorbis 或 Opus）、opus 由模组自带的解码器解码；m4a（AAC 或 ALAC）、aac、mp4、wma 走 Windows Media Foundation（Windows N 版需安装“媒体功能包”）。
 
@@ -117,6 +123,7 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 - 显示文件标签里的歌名和正在放的歌。
 - “**上一首**”“**下一首**”和播放模式：**随机播放**（每轮每首放一次，上一首沿本次运行放过的歌往回走）或**顺序播放**（按列表从上到下）。模式所有类别共用，会记住。
 - 双击歌名立刻切到这首（这一类正在放时）。旁边的按钮（文件夹 / 歌单文件 / 页面添加）在资源管理器里打开这首歌所在的文件夹并选中它，悬停说明这首歌写在哪里、怎么去掉。
+- 歌单一次显示 10 首，可以滚动（拖旁边的滚动条，或在歌单上滚鼠标滚轮）；群系是歌单左边的一列，各带歌数。
 - 纪念堂和点唱机的歌和原版一样只在附近听得到，跟随音效音量。
 - 打开键可以是 Alt+D 这样的组合键：点页面标题栏的键位框后按下即可，右键清除。
 - 页面支持英文和简体中文。
@@ -131,6 +138,7 @@ Three ways, mixed freely; songs of one kind are shuffled together.
 ### 注意
 
 - 终端或 Esc 菜单开着时按打开键没有反应（按键被游戏界面截走）。
+- 加载画面里洞穴音乐可能已经开始，轻轻垫在加载等待的歌下面，直到落地。原版音乐也是这样。
 - 独占全屏时，文件选择框可能把游戏切到后台。
 - 遇到问题：把 `FSD\Saved\SaveGames\Mods\CustomSoundtrackNative\Log.txt` 和 `ue4ss\UE4SS.log` 里 `[CustomSoundtrackNative]` 前后几行发过来。
 - 卸载：在 mintcat 里禁用即可。歌的文件夹和歌单不受影响；需要的话删掉 `FSD\Saved\SaveGames\Mods\CustomSoundtrackNative\`。
